@@ -108,7 +108,7 @@ function parseMtl(mtl, material) {
   if (mtl instanceof Buffer) {
     mtl = mtl.toString("utf-8");
   }
-  
+
   var data = {};
 
   mtl.replace(/newmtl/gi, ",newmtl").split(",").filter(function(block) {
@@ -170,4 +170,4 @@ function parseMaterialName(obj) {
   })[0].split(" ")[1];
 }
 
-module.exports = parse;
+exports.parse = parse;
