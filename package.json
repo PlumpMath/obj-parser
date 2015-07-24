@@ -1,0 +1,18 @@
+{
+  "name": "obj_parser",
+  "version": "0.0.1",
+  "description": "A parser that takes OBJ and MTL files, and produces a JSON file with the data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "json",
+    "obj",
+    "mtl"
+  ],
+  "author": "Jeremy Neal",
+  "license": "MIT",
+  "repository": "https://github.com/sdroadie/obj-parser.git"
+}
