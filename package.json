@@ -1,5 +1,5 @@
 {
-  "name": "obj-parser",
+  "name": "obj-json-parser",
   "version": "1.0.0",
   "description": "A parser that takes OBJ and MTL files, and produces a JSON file with the data.",
   "main": "index.js",
@@ -10,7 +10,8 @@
     "node",
     "json",
     "obj",
-    "mtl"
+    "mtl",
+    "parser"
   ],
   "author": "sdroadie <jneal1992@gmail.com>",
   "license": "MIT",
