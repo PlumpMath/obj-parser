@@ -27,6 +27,12 @@ function parse(obj, mtl) {
  * @param {string} obj: contents of an OBJ file.
  */
 function parseObj(obj) {
+
+  // Check type of obj file (should be a string or a buffer.)
+  if (obj instanceof Buffer) {
+    obj = obj.toString("utf-8");
+  }
+
   var data = {
     vertices: [],
     faces: [],
@@ -99,9 +105,11 @@ function parseObj(obj) {
  * @param {Object} data: the data object you are appending information to.
  */
 function parseMtl(mtl, material) {
+  if (mtl instanceof Buffer) {
+    mtl = mtl.toString("utf-8");
+  }
+  
   var data = {};
-
-  console.log(material);
 
   mtl.replace(/newmtl/gi, ",newmtl").split(",").filter(function(block) {
     return block.indexOf(material) > -1;
@@ -153,6 +161,10 @@ function parseMtl(mtl, material) {
  * @param {string} obj: the OBJ file that you're pulling the material name from.
  */
 function parseMaterialName(obj) {
+  if (obj instanceof Buffer) {
+    obj = obj.toString("utf-8");
+  }
+
   return obj.split("\n").filter(function(line) {
     return line.indexOf("usemtl") > -1;
   })[0].split(" ")[1];

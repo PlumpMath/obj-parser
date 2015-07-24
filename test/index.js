@@ -7,8 +7,8 @@ describe("obj-parser", function() {
   describe("#parse(obj, mtl)", function() {
     it("should return an array of vertices, faces, normals, and uv coordinates", function() {
       // Reading files as strings.
-      var obj = fs.readFileSync(path.join(__dirname, "./data/test.obj"), "utf-8");
-      var mtl = fs.readFileSync(path.join(__dirname, "./data/test.mtl"), "utf-8");
+      var obj = fs.readFileSync(path.join(__dirname, "./data/test.obj"));
+      var mtl = fs.readFileSync(path.join(__dirname, "./data/test.mtl"));
 
       var data = parse(obj, mtl);
 
