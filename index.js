@@ -142,7 +142,7 @@ function parseMtl(mtl, material) {
       case "d":
       case "Tr":
         // Dissolved/Transparent
-        data.alpha = parseFloat(split[1]);
+        data.opacity = parseFloat(split[1]);
         break;
       case "Tf":
         data.emissive = parseFloat(split[1]);
